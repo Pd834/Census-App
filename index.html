@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="C:\Users\darkj\Downloads\Responsive_Portfolio_10-05-23-main\assets\port.png">
+    <title>| Census App |</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #5acb54;
+  --primary-color-dark: #7823be;
+  --secondary-color: #b7b734;
+  --text-dark: #000000;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 1s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+  transition: 0.7s ease;
+  transform: scale(1.1)
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span:hover {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #1d4d57;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+    transition: 0.7s ease;
+    transform: scale(1.2);
+    
+}
+.hire {
+  background-color: var(--primary-color);
+  color: #1d4d57;
+}
+
+.hire:hover {
+  background-color: var(--primary-color-dark);
+    transition: 0.7s ease;
+    transform: scale(1.2);
+    
+}
+.hir {
+  background-color: var(--primary-color);
+  color: #1d4d57;
+}
+
+.hir:hover {
+  background-color: var(--primary-color-dark);
+    transition: 0.7s ease;
+    transform: scale(1.2);
+    
+}
+.hi {
+  background-color: var(--primary-color);
+  color: #1d4d57;
+}
+
+.hi:hover {
+  background-color: var(--primary-color-dark);
+    transition: 0.7s ease;
+    transform: scale(1.2);
+    
+}
+
+.portfolio {
+  color: var(--primary-color);
+  
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+  transition: 0.7s ease;
+  transform: scale(1.2);
+}
+
+.image {
+  display: grid;
+  place-items: center;
+  transition: 1s;
+  animation: name;
+  animation-duration: 2s;
+}
+.image:hover{
+  transition: 0.7s ease;
+  transform: scale(1.1)
+  
+} 
+.image img{
+  width: min(25rem, 100%);
+  border-radius: 100%;
+  transition: 1s;
+}
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+@keyframes name
+{
+from{
+transform: translateX(300px);
+}
+to{
+transform: translateY(30);
+}
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Home Leader</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Ram<br /></span>
+          </h1>
+          <p class="description">
+            Welcome! I'm the head of my family.
+            I'm a farmer.Lives in Narasipuram.
+          </p>
+          <div class="action__btns">
+            <button ondblclick="hire__me()">View Family Details</button>
+            <script>
+              function hire__me() {
+                  window.location.href = "ram.html";
+              }
+          </script>
+          </div>
+        </div>
+        <div class="image">
+          <img src="ram.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+                      
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Muthukumar K<br /></span>
+          </h1>
+          <p class="description">
+            Welcome! I'm the head of my family.
+            I work as an employee in an industry.
+            Lives in Narasipuram.
+          </p>
+          <div class="action__btns">
+            <button ondblclick="hire()">View Family Details</button>
+            <script>
+              function hire() {
+                  window.location.href = "muthukumar.html";
+              }
+          </script>
+          </div>
+        </div>
+        <div class="image">
+          <img src="muthukumar.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Karupusamy<br /></span>
+          </h1>
+          <p class="description">
+            Welcome! I'm the head of my family.
+            I'm the self employee.I lives in Narasipuram.
+          </p>
+          <div class="action__btns">
+            <button ondblclick="hir()">View Family Details</button>
+            <script>
+              function hir() {
+                  window.location.href = "karupusamy.html";
+              }
+          </script>
+          </div>
+        </div>
+        <div class="image">
+          <img src="karuppusamy.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Manoj<br /></span>
+          </h1>
+          <p class="description">
+            Welcome! I'm the head of my family.I'm the Government employee.Lives in Narasipuram.
+          </p>
+          <div class="action__btns">
+            <button ondblclick="hi()">View Family Details</button>
+            <script>
+              function hi() {
+                  window.location.href = "manoj.html";
+              }
+          </script>
+          </div>
+        </div>
+        <div class="image">
+          <img src="manoj.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
